@@ -1,14 +1,16 @@
 #include<stack>
 #include <vector>
 using namespace std;
-//  * Definition for a binary tree node.
 struct TreeNode {
      int val;
       TreeNode *left;
       TreeNode *right;
       TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
- 
+/*
+    1.将二叉树搜索树按顺序读出来，找到破坏递增顺序的第一个节点和最后一个节点
+    2.交换两个节点的值(不要交换整个节点)
+*/
 class Solution
 {
 public:

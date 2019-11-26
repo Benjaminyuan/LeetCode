@@ -8,6 +8,9 @@ struct TreeNode {
       TreeNode *right;
       TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
+/*
+    1.思路和solution 1 是一样的，但是要递归的方法去计算，只需要记录当前递归的最大节点prev
+*/
 class Solution {
 private:
     TreeNode *node1 = nullptr;
