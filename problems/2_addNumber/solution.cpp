@@ -34,8 +34,7 @@ public:
                 cur2->val = sum%10;
                 tail->next = cur2;
                 tail = cur2;
-                cur2 = cur2->next;    
-                
+                cur2 = cur2->next;
             }
         }else if(cur2 == nullptr){
               while(cur1 != nullptr){
@@ -43,8 +42,7 @@ public:
                 overflow =  sum/10;
                 cur1->val = sum%10;
                 tail = cur1;
-                cur1 = cur1->next;    
-                
+                cur1 = cur1->next;
             }
         }
         if(overflow != 0){
