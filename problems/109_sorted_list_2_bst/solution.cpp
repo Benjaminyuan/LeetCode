@@ -33,6 +33,7 @@ public:
         auto fast = head;
         auto slow = head;
         auto pre = head;
+        //中间节点
         while (fast && fast->next)
         {
             fast = fast->next->next;
