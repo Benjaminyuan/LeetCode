@@ -18,7 +18,7 @@ class JumpGame {
                       break;
                  }
                  if(minStep[i]+1 < minStep[i+j]){
-                      minStep[j] = minStep[i]+1;
+                      minStep[j+i] = minStep[i]+1;
                 }
             }
         }

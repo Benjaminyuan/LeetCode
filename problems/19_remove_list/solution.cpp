@@ -31,4 +31,24 @@ public:
         delete temp;
         return head;
     }
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+    // 设置哨兵可以排除头节点的情况
+        ListNode flag(0);
+        flag.next = head;
+        ListNode* fast = &flag;
+        ListNode* slow = &flag;
+        int i = 0;
+        while(fast->next != nullptr && i < n){
+            fast = fast->next ;
+            i++;
+        }
+        while(fast->next != nullptr){
+            fast = fast->next;
+            slow = slow->next;
+        }
+        ListNode* temp = slow->next;
+        slow->next = slow->next->next;
+        delete temp;
+        return flag.next;
+    }
 };
